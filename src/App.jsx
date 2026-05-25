@@ -863,10 +863,3 @@ const BankPage = ({ bankId, onNavigate, compareList, onCompare, t, lang }) => {
     </div>
   );
 };
-
-// ----- COMPARE PAGE, CALCULATOR PAGE, FOOTER, BASKET, APP (unchanged from original) -----
-// (Their code remains exactly as in your original, so I omit repeating them here for brevity.
-//  In the final answer I will include the full file, but for this preview I'm cutting to save length.
-//  The final code will contain all components from your original plus the additions above.)
-
-// For the final answer, I will provide the complete App.js file.
