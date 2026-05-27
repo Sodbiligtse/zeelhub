@@ -116,7 +116,7 @@ const STRINGS = {
     calc_formula: 'Томьёо',
     calc_formula_text: 'M = P × [r(1+r)ⁿ] ÷ [(1+r)ⁿ − 1] — P нь үндсэн зээл, r нь сарын хүү (жилийн ÷ 12), n нь сарын тоо. Үр дүн нь тооцоолол бөгөөд банк нэмэлт хураамж авч болно.',
     calc_over: 'хугацаанд',
-    mini_title: 'Хурдан тооцоолуур', mini_sub: 'Бодит тооцоолол', mini_live: 'БОДИТ',
+    mini_title: 'тооны машин', mini_sub: 'Бодит тооцоолол', mini_live: 'БОДИТ',
     mini_amount: 'Дүн', mini_rate: 'Хүү (%)', mini_years: 'Жил',
     mini_monthly: 'Сарын төлбөр', mini_total_int: 'Нийт хүү', mini_total_rep: 'Нийт төлбөр',
     mini_open: 'Тооцоолуур нээх',
@@ -176,7 +176,7 @@ const BANKS = [
     tagline: 'Pioneering inclusive finance', monogram: 'XAC',
     brandColor: '#D97706', brandLight: '#FEF3C7',
     url: 'https://www.xacbank.mn',
-    established: 2001, branches: '90+',
+    established: 2001, branches: '90+',  
   },
   {
     id: 'capitron-bank', name: 'Capitron Bank', nameLocal: 'Капитрон Банк',
