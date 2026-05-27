@@ -78,7 +78,7 @@ const STRINGS = {
     hero_badge_pre: 'банк ·', hero_badge_mid: 'зээлийн бүтээгдэхүүн · Бодит тооцоолол',
     hero_title1: 'Монголын', hero_title2: 'шилдэг зээлийн хүүг', hero_title3: 'нэг дор харьцуулаарай.',
     hero_sub: 'Банк санхүүгийн байгууллагуудын зээлүүдийг зээлийн төрлөөр шүүж, төлөлтийн хэмжээг сар, жилээр тооцоолоорой.',
-    hero_cta1: 'Зээл харьцуулах', hero_cta2: 'Тооцоолуур нээх',
+    hero_cta1: 'Зээл харьцуулах', hero_cta2: 'Тооцоолол хийх',
     hero_stat1: 'Томоохон банк', hero_stat2: 'Зээлийн бүтээгдэхүүн', hero_stat3: 'Өнөөдрийн шилдэг хүү',
     banks_title: 'Банкаар харах', banks_sub: 'Аль ч банкийг дарж зээлийн бүтээгдэхүүнийг харна уу.',
     banks_from: 'Хүүгээс', banks_products: 'Бүтээгдэхүүн', banks_branches: 'Салбар',
@@ -119,7 +119,7 @@ const STRINGS = {
     mini_title: 'тооны машин', mini_sub: 'Бодит тооцоолол', mini_live: 'БОДИТ',
     mini_amount: 'Дүн', mini_rate: 'Хүү (%)', mini_years: 'Жил',
     mini_monthly: 'Сарын төлбөр', mini_total_int: 'Нийт хүү', mini_total_rep: 'Нийт төлбөр',
-    mini_open: 'Тооцоолуур нээх',
+    mini_open: 'Тооцоолол хийх',
     bank_all: 'Бүгд', bank_official: 'Албан вэбсайт', bank_from_rate: 'Хүүгээс',
     bank_products: 'Бүтээгдэхүүн', bank_established: 'Үүссэн', bank_branches: 'Салбар',
     bank_back: 'Бүх банк', bank_lowest: 'хамгийн бага хүү',
@@ -253,11 +253,17 @@ const CATEGORIES = [
 // ============================================================
 const LOANS = [
   // ── Khan Bank ──
-  { id: 'khan-salary',    bankId: 'khan-bank',     name: 'Salary Loan',           nameMn: 'Цалингийн зээл',         category: 'salary',   annualRate: 21.6, minAmount: 500000,    maxAmount: 30000000,   minTermMonths: 3,  maxTermMonths: 36,  eligibility: ['Stable employment 6+ months', 'Salary via Khan Bank', 'Age 21–60', 'No bad credit history'] },
-  { id: 'khan-pension',   bankId: 'khan-bank',     name: 'Pension Loan',          nameMn: 'Тэтгэврийн зээл',        category: 'pension',  annualRate: 15.6, minAmount: 300000,    maxAmount: 15000000,   minTermMonths: 3,  maxTermMonths: 48,  eligibility: ['Pension received via Khan Bank', 'Age up to 70', 'Mongolian citizen'] },
-  { id: 'khan-mortgage',  bankId: 'khan-bank',     name: '8% Housing Program',    nameMn: '8% Орон сууцны хөтөлбөр',category: 'mortgage', annualRate: 8.0,  minAmount: 30000000,  maxAmount: 200000000,  minTermMonths: 60, maxTermMonths: 360, eligibility: ['First-time buyer', 'Government 8% program qualified', 'Property up to 80m²', 'Income verification'] },
-  { id: 'khan-business',  bankId: 'khan-bank',     name: 'SME Working Capital',   nameMn: 'ЖДҮ эргэлтийн хөрөнгө', category: 'business', annualRate: 19.2, minAmount: 5000000,   maxAmount: 500000000,  minTermMonths: 6,  maxTermMonths: 60,  eligibility: ['Registered business 12+ months', 'Audited financials', 'Collateral required'] },
-  { id: 'khan-student',   bankId: 'khan-bank',     name: 'Education Loan',        nameMn: 'Боловсролын зээл',       category: 'student',  annualRate: 11.4, minAmount: 1500000,   maxAmount: 50000000,   minTermMonths: 24, maxTermMonths: 96,  eligibility: ['University admission letter', 'Co-signer required', 'Tuition invoice'] },
+  { id: 'khan-salary',    bankId: 'khan-bank',     name: 'Salary Loan',           nameMn: 'Цалингийн зээл',         category: 'salary',   annualRate: 21.6, minAmount: 500000,    maxAmount: 30000000,   minTermMonths: 3,  maxTermMonths: 36,  eligibility: ['Тогтвортой ажлын байртай, хамгийн багадаа 6+ сар ажилласан', 'Цалингаа Khan Bank-аар авдаг', 'Нас: 21–60', 'Муу зээлийн түүхгүй'] },
+  { id: 'khan-pension',   bankId: 'khan-bank',     name: 'Pension Loan',          nameMn: 'Тэтгэврийн зээл',        category: 'pension',  annualRate: 15.6, minAmount: 300000,    maxAmount: 15000000,   minTermMonths: 3,  maxTermMonths: 48,  eligibility: ['Тэтгэврээ Khan Bank-аар дамжуулан авдаг', 'Насны дээд хязгаар: 70', 'Монгол Улсын иргэн байх
+
+'] },
+  { id: 'khan-mortgage',  bankId: 'khan-bank',     name: '8% Housing Program',    nameMn: '8% Орон сууцны хөтөлбөр',category: 'mortgage', annualRate: 8.0,  minAmount: 30000000,  maxAmount: 200000000,  minTermMonths: 60, maxTermMonths: 360, eligibility: ['Анх удаа орон сууц худалдан авч буй', 'Засгийн газрын 8%-ийн ипотекийн хөтөлбөрийн шаардлага хангасан', '80м² хүртэлх талбайтай үл хөдлөх хөрөнгө', 'Орлогын баталгаажуулалт шаардлагатай
+
+'] },
+  { id: 'khan-business',  bankId: 'khan-bank',     name: 'SME Working Capital',   nameMn: 'ЖДҮ эргэлтийн хөрөнгө', category: 'business', annualRate: 19.2, minAmount: 5000000,   maxAmount: 500000000,  minTermMonths: 6,  maxTermMonths: 60,  eligibility: ['Албан ёсоор бүртгэлтэй бизнес эрхэлдэг, хамгийн багадаа 12+ сар үйл ажиллагаа явуулсан', 'Аудитлагдсан санхүүгийн тайлантай', 'Барьцаа хөрөнгө шаардлагатай
+
+'] },
+  { id: 'khan-student',   bankId: 'khan-bank',     name: 'Education Loan',        nameMn: 'Боловсролын зээл',       category: 'student',  annualRate: 11.4, minAmount: 1500000,   maxAmount: 50000000,   minTermMonths: 24, maxTermMonths: 96,  eligibility: ['Их сургуулийн албан ёсны элсэлтийн захидалтай', 'Co-signer required', 'Tuition invoice'] },
   { id: 'khan-car',       bankId: 'khan-bank',     name: 'Auto Loan',             nameMn: 'Автомашины зээл',        category: 'car',      annualRate: 18.0, minAmount: 3000000,   maxAmount: 150000000,  minTermMonths: 12, maxTermMonths: 60,  eligibility: ['30% down payment', 'Vehicle as collateral', 'Comprehensive insurance'] },
 
   // ── Golomt Bank ──
